@@ -14,14 +14,10 @@ A BepInEx plugin that enables console toggling in-game using the backtick/tilde 
 ## Installation
 
 ### Manual Installation
-1. Install [BepInEx 5.x](https://github.com/BepInEx/BepInEx/releases) for your game
+1. Install [BepInEx 5.x](https://github.com/BepInEx/BepInEx/releases) for Necropolis
 2. Download the latest release from the [Releases](../../releases) page
 3. Extract `ConsoleToggle.dll` to `BepInEx/plugins/` folder
 4. Launch the game
-
-### Mod Manager Installation
-1. Install via your preferred mod manager (r2modman/Thunderstore Mod Manager)
-2. Launch the game
 
 ## Usage
 Press ` (backtick/tilde key) to cycle through console modes. A toast notification will display the current mode.
@@ -36,8 +32,8 @@ Press ` (backtick/tilde key) to cycle through console modes. A toast notificatio
 1. Clone the repository
 2. Add references to:
    - `BepInEx/core/BepInEx.dll`
-   - `GameName_Data/Managed/UnityEngine.dll`
-   - `GameName_Data/Managed/Assembly-CSharp.dll`
+   - `Necropolis_Data/Managed/UnityEngine.dll`
+   - `Necropolis_Data/Managed/Assembly-CSharp.dll`
 3. Build the project
 4. Output DLL will be in `bin/Debug/` or `bin/Release/`
 
@@ -45,4 +41,4 @@ Press ` (backtick/tilde key) to cycle through console modes. A toast notificatio
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Credits
-Created by Komi
+Created by KoMiKoZa with AI assistance (Claude)
