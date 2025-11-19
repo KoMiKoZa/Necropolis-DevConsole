@@ -1,44 +1,97 @@
-# Console Toggle Mod
+# Dev Console
 
-A BepInEx plugin that enables console toggling in-game using the backtick/tilde key.
+### A simple mod for Necropolis that adds a configurable hotkey to toggle the developer console.
+
+---
+### 💡 Notice 1
+- It is recommended to use [Mod Config Menu](https://thunderstore.io/c/necropolis/p/KoMiKoZa/ModConfigMenu/) to edit and hot-reload configuration changes in-game without restarting. Not required, but convenient.
+
+---
+### 💡 Notice 2
+- For a full list of console commands, please see [Necropolis Research - Console Data](https://github.com/zettiverse/necropolis-research/blob/master/console.md) .
+
+---
 
 ## Features
-- Toggle console with ` (backtick/tilde) key
-- Cycles through all console modes: Hidden → Icon → Mini → LogWindow → Filtered
-- In-game toast notifications showing current mode
 
-## Requirements
-- BepInEx 5.x (Mono, x86)
-- .NET Framework 3.5
+### Configurable Hotkey - Toggle the console with any key (default: ` / Backtick).
+**If it doesn't appear upon backtick/backquote press, then simply rebind the key or try this:**
+- Danish keyboards you just need to use the æ key
+- French keyboard it's ù (near M)
+- German keyboards its ö, (right to l)
+- Swiss keyboard it's ¨ (left to Enter)
+- Spanish Keyboard it's ñ
+- Norwegian keyboard it's Ø
+- Portuguese keyboard it's ç (next to the "L" key)
+- Swedish keyboard it's Ö, (next to L)
+- Finnish keyboard it's Ö
+- Estonian keyboard it's Ü
+- Hungarian keyboard it is ö (right to 9)
+- Italian keyboard it's ò (right to L)
+- According to darkfender666 Italian can be also @
+- **Display Mode Selection**: Choose your preferred console display mode (Icon, Mini, LogWindow, or Filtered)
+- **Hot-Reloadable Config**: Change settings in-game with mod config managers - no restart needed
 
 ## Installation
 
-### Manual Installation
-1. Install [BepInEx 5.x](https://github.com/BepInEx/BepInEx/releases) for Necropolis
-2. Download the latest release from the [Releases](../../releases) page
-3. Extract `ConsoleToggle.dll` to `BepInEx/plugins/` folder
-4. Launch the game
+### Manual
+
+1. Install [Necropolis BepInEx 5.4.2304 or later](https://thunderstore.io/c/necropolis/p/BepInEx/BepInExPack_Necropolis/)
+2. Download and extract this mod into `Necropolis/BepInEx/plugins/`
+3. Run the game
+
+## Configuration
+
+The configuration file is located at `BepInEx/config/komikoza.necropolis.devconsole.cfg`
+
+### Available Settings
+
+**General**
+- `ModEnabled` - Enable or disable this mod (default: `true`)
+
+**Debug**
+- `DebugMode` - Enable debug logging (default: `false`)
+
+**Controls**
+- `ToggleKey` - Key to toggle the console (default: `BackQuote`)
+  - See [Unity KeyCode reference](https://docs.unity3d.com/ScriptReference/KeyCode.html) for all available keys
+
+**Console**
+- `PreferredMode` - Console display mode when visible (default: `Mini`)
+  - `0` = Icon (minimal UI icon)
+  - `1` = Mini (compact input box)
+  - `2` = LogWindow (full log window)
+  - `3` = Filtered (filtered log view)
 
 ## Usage
-Press ` (backtick/tilde key) to cycle through console modes. A toast notification will display the current mode.
 
-## Building from Source
+1. Press ` (or your configured key) to show the console
+2. Press again to hide it
+3. The console will always open in your configured `PreferredMode`
+4. Change `PreferredMode` in-game and it applies immediately on next toggle
 
-### Prerequisites
-- Visual Studio 2012 or later
-- .NET Framework 3.5
+## Compatibility
 
-### Steps
-1. Clone the repository
-2. Add references to:
-   - `BepInEx/core/BepInEx.dll`
-   - `Necropolis_Data/Managed/UnityEngine.dll`
-   - `Necropolis_Data/Managed/Assembly-CSharp.dll`
-3. Build the project
-4. Output DLL will be in `bin/Debug/` or `bin/Release/`
+- **BepInEx**: 5.4.21+
+- **Steam version of Necropolis: Brutal Edition**
+- Works with mod configuration managers for in-game settings
 
-## License
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+## Changelog
+
+### 1.0.1
+- Initial Thunderstore release (previous version was shared in Necropolis Discord)|
+- Removed console mode shuffling functionality
+- Configurable console toggle hotkey
+- Selectable display modes
+- Hot-reloadable configuration
 
 ## Credits
-Created by KoMiKoZa with AI assistance (Claude)
+
+**Author**: KoMiKoZa  
+**Discord**: komikoza
+
+## Support
+
+- **Website**: [Mod Documentation](https://komikoza.github.io/necropolis/mods/dev-console.html)
+- **Source Code**: [GitHub](https://github.com/KoMiKoZa/Necropolis-DevConsole)
+- **Issues**: Report bugs on [Discord](https://discord.gg/2233yFQ) or [GitHub Issues](https://github.com/KoMiKoZa/Necropolis-DevConsole/issues)
